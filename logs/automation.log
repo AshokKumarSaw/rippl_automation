@@ -1,0 +1,2 @@
+18:06:29.208 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+18:06:45.736 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
