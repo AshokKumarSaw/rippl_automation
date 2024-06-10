@@ -26,11 +26,17 @@ public class Hook {
 	public Logger logger; // for logging
 	public String br; // to store browser name
 
+	
+	/**
+	 * To Read data from Config.Properties File and subsequently launch the browser
+	 */
 	@Before
 	public void setup() throws IOException {
+		
+		
 		// for log
 		logger = LogManager.getLogger(this.getClass());
-
+		
 		File file = new File(".\\src\\test\\resources\\config.properties");
 		FileInputStream fileInputStream = new FileInputStream(file);
 		properties = new Properties();
@@ -55,7 +61,9 @@ public class Hook {
 	}
 	
 	
-	
+	/**
+	 * To take screenshots of failed test scripts and subsequently close all the open tabs of a browser
+	 */
 	
 	@After
 	public void tearDown(Scenario scenario) {

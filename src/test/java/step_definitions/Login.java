@@ -58,8 +58,8 @@ public class Login {
 	}
 
 	@When("selects  {string}, {string},{string},{string}")
-	public void selects(String startdate, String enddate, String cusTags, String imgTrckngTyp) {
-		addWaystoEarnActionPage.startEndDate_fltrByCusTags_imgTrackingTyp(startdate, enddate, cusTags, imgTrckngTyp);
+	public void selects(String startdate, String enddate, String Filter_by_customer_tags, String tracking_instruction) throws InterruptedException   {
+		addWaystoEarnActionPage.startEndDate_fltrByCusTags_trackingIns(startdate, enddate, Filter_by_customer_tags, tracking_instruction);
 	}
 
 	@When("enters {string} and impact details {string},{string},{string}")

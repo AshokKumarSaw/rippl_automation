@@ -1,4 +1,32 @@
-18:33:36.076 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
-18:33:53.212 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
-18:44:54.058 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
-18:45:02.118 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
+12:27:42.802 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+12:27:49.458 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
+12:28:56.269 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+12:29:11.440 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
+12:46:40.541 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+12:46:54.307 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
+12:56:25.025 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+12:56:38.046 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
+12:59:33.342 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+12:59:48.984 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
+14:46:49.451 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+14:47:15.455 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
+14:48:28.385 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+14:48:38.818 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
+14:53:16.565 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+14:53:30.460 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
+14:58:58.720 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+14:59:11.802 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
+15:01:41.538 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+15:01:50.447 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
+15:06:18.800 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+15:06:35.065 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
+15:08:12.910 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+15:08:18.990 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
+15:38:06.644 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+15:38:23.750 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
+15:47:03.460 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+15:47:16.073 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
+15:51:41.589 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+15:52:09.442 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
+15:53:13.712 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+15:53:21.996 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button

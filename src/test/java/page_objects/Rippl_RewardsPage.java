@@ -32,7 +32,14 @@ public class Rippl_RewardsPage extends BasePage {
 	@FindBy(xpath = "//h2[contains(text(),'Build From Scratch')]")
 	WebElement btnBuildFromScratch;
 
+	
+	/**
+	 * User navigates to Hamburger icon, program->Points->Add Ways to Earn->Bild From Scratch Template 
+	 *  
+	 */
+	
 	public void navigateToBuildFromScratchTemplate() {
+		logger.info("User clicks on Hamburger icon,Program->Points->Add Ways to Earn-> Build From Scratch Template");
 		driver.switchTo().frame("app-iframe");
 		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		explicitWait.until(ExpectedConditions.elementToBeClickable(iconHamburger)).click();
