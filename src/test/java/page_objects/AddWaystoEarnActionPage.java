@@ -46,7 +46,7 @@ public class AddWaystoEarnActionPage extends BasePage {
 	@FindBy(css = "input[type=file][name=image]")
 	WebElement btnUploadBanner;
 
-	@FindBy(css = "//button[text()='Crop']")
+	@FindBy(xpath = "//button[text()='Crop']")
 	WebElement btnBannerCrop;
 
 	@FindBy(xpath = "(//input[@class='MuiInputBase-input MuiFilledInput-input MuiInputBase-inputSizeSmall css-7ulcqb' and @type='number'])[1]")
@@ -126,9 +126,12 @@ public class AddWaystoEarnActionPage extends BasePage {
 		explicitWait.until(ExpectedConditions.elementToBeClickable(txtTrackingInstruction))
 				.sendKeys(tracking_instruction);
 
-		explicitWait.until(ExpectedConditions.elementToBeClickable(btnUploadBanner))
-				.sendKeys(System.getProperty("user.dir") + "\\image\\banner_img.jpg");
+		btnUploadBanner.sendKeys(System.getProperty("user.dir") + "\\image\\banner_img.jpg");
 		explicitWait.until(ExpectedConditions.elementToBeClickable(btnBannerCrop)).click();
+
+//		explicitWait.until(ExpectedConditions.elementToBeClickable(btnUploadBanner))
+//				.sendKeys(System.getProperty("user.dir") + "\\image\\banner_img.jpg");
+//		explicitWait.until(ExpectedConditions.elementToBeClickable(btnBannerCrop)).click();
 
 	}
 

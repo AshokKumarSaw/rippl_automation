@@ -29,12 +29,13 @@ public class Login {
 	@Then("user is on shopify dashboard")
 	public void user_is_on_shopify_dashboard() {
 		landinPage.ShopifyDashboard();
-
+		// Validation is required
 	}
 
 	@When("user selects the store Staging May two Test Store one")
 	public void user_selects_the_store_staging_may_two_test_store_one() {
 		landinPage.selectStore();
+		// Validation is required
 	}
 
 	@When("clicks on Rippl Reward staging")
