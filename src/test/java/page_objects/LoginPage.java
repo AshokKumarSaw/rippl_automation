@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.ActionUtil;
 
 public class LoginPage extends BasePage {
-	public WebDriverWait explicitWait;
+	public WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
 	public LoginPage(WebDriver driver) {
 		super(driver);
@@ -36,38 +36,28 @@ public class LoginPage extends BasePage {
 
 	// Methods
 
-	
-	
 	/**
 	 * The user clicks on the Login from the Shopify home page.
 	 */
-	
+
 	public void clickShopifyLoginLnk() {
 		logger.info("User clicks Login Link on Shopify page ");
-		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		explicitWait.until(ExpectedConditions.elementToBeClickable(lnkLogin)).click();
 
 	}
 
 	/**
 	 * User Logs in into the Shopify application
+	 * 
 	 * @param email
 	 * @param password
 	 */
 	public void loginIntoShopify(String email, String password) throws InterruptedException {
-		logger.info(
-				"User enters email,clicks on Continue with Email, enters password, clicks on Login button");
+		logger.info("User enters email,clicks on Continue with Email, enters password, clicks on Login button");
 
-		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		explicitWait.until(ExpectedConditions.elementToBeClickable(txtEmail)).sendKeys(email);
-
-		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		explicitWait.until(ExpectedConditions.elementToBeClickable(btnContinueWithEmail)).click();
-
-		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		explicitWait.until(ExpectedConditions.elementToBeClickable(txtPassword)).sendKeys(password);
-
-		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		explicitWait.until(ExpectedConditions.elementToBeClickable(btnLogin)).click();
 
 	}

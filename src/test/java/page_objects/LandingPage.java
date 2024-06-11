@@ -11,60 +11,49 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.ActionUtil;
 
 public class LandingPage extends BasePage {
-	public WebDriverWait explicitWait;
+	public WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
 	public LandingPage(WebDriver driver) {
 		super(driver);
 	}
 
-	
-	
 	@FindBy(xpath = "//span[@class='Polaris-Avatar__Initials']//*[name()='svg']")
 	WebElement actLogo;
-	
-	
+
 	@FindBy(xpath = "//div[normalize-space()='Staging May 2 Test Store 1']")
 	WebElement lnkStore;
 
 	@FindBy(xpath = "//span[contains(text(),'Rippl Rewards Staging')]")
 	WebElement lnkRipplRewardStaging;
 
-	
 	/**
 	 * User clicks on My_Account Log in Shopify home page
 	 */
-	
-	public void ShopifyDashboard()  {
+
+	public void ShopifyDashboard() {
 		logger.info("User clicks on Shopify Account Profile Logo displayed on top-right");
-		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		explicitWait.until(ExpectedConditions.elementToBeClickable(actLogo)).click();
-		
-		
+
 	}
-	
+
 	/**
-	 * User selects the store from My_Account dropdown 
+	 * User selects the store from My_Account dropdown
 	 */
-	public  void selectStore() 
-	{
+	public void selectStore() {
 		logger.info("User selects the Staging May 2 Test Store 1 store from the Account dropdown");
-		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		explicitWait.until(ExpectedConditions.elementToBeClickable(lnkStore)).click();
 		driver.manage().window().fullscreen();
 	}
-	
+
 	/**
-	 * User clicks on Rippl Reward Staging Link displayed under App  
+	 * User clicks on Rippl Reward Staging Link displayed under App
 	 */
-	public void ripplRewardStaging()
-	{
-		logger.info("User clicks on Rippl Reward Staging link displayed in menu under App section for the store Staging May 2 Test Store 1");
-		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
+	public void ripplRewardStaging() {
+		logger.info(
+				"User clicks on Rippl Reward Staging link displayed in menu under App section for the store Staging May 2 Test Store 1");
 		explicitWait.until(ExpectedConditions.elementToBeClickable(lnkRipplRewardStaging)).click();
 		driver.manage().window().maximize();
-		
+
 	}
-	
-	
 
 }

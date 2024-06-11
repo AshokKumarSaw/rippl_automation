@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.ActionUtil;
 
 public class Rippl_RewardsPage extends BasePage {
-	public WebDriverWait explicitWait;
+	public WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
 	public Rippl_RewardsPage(WebDriver driver) {
 		super(driver);
@@ -32,32 +32,22 @@ public class Rippl_RewardsPage extends BasePage {
 	@FindBy(xpath = "//h2[contains(text(),'Build From Scratch')]")
 	WebElement btnBuildFromScratch;
 
-	
 	/**
-	 * User navigates to Hamburger icon, program->Points->Add Ways to Earn->Bild From Scratch Template 
-	 *  
+	 * User navigates to Hamburger icon, program->Points->Add Ways to Earn->Bild
+	 * From Scratch Template
+	 * 
 	 */
-	
+
 	public void navigateToBuildFromScratchTemplate() {
 		logger.info("User clicks on Hamburger icon,Program->Points->Add Ways to Earn-> Build From Scratch Template");
 		driver.switchTo().frame("app-iframe");
-		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
 		explicitWait.until(ExpectedConditions.elementToBeClickable(iconHamburger)).click();
-		
-		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		explicitWait.until(ExpectedConditions.elementToBeClickable(drpdwnProgram)).click();
-		
-		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		explicitWait.until(ExpectedConditions.elementToBeClickable(submenuPoints)).click();
-		
-		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		explicitWait.until(ExpectedConditions.elementToBeClickable(btnAddWaystoEarn)).click();
-		
-		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		explicitWait.until(ExpectedConditions.elementToBeClickable(btnBuildFromScratch)).click();
-		
-		
-		
+
 	}
 
 }

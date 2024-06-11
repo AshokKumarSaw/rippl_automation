@@ -13,7 +13,7 @@ public class Login {
 	LoginPage loginPage = new LoginPage(Hook.driver);
 	LandingPage landinPage = new LandingPage(Hook.driver);
 	Rippl_RewardsPage rippl_RewardsPage = new Rippl_RewardsPage(Hook.driver);
-	AddWaystoEarnActionPage addWaystoEarnActionPage=new AddWaystoEarnActionPage(Hook.driver);
+	AddWaystoEarnActionPage addWaystoEarnActionPage = new AddWaystoEarnActionPage(Hook.driver);
 
 	@Given("user is on shopify home page")
 	public void user_is_on_shopify_home_page() {
@@ -27,7 +27,7 @@ public class Login {
 	}
 
 	@Then("user is on shopify dashboard")
-	public void user_is_on_shopify_dashboard()  {
+	public void user_is_on_shopify_dashboard() {
 		landinPage.ShopifyDashboard();
 
 	}
@@ -57,13 +57,17 @@ public class Login {
 		addWaystoEarnActionPage.actionDescription(action_description);
 	}
 
-	@When("selects  {string}, {string},{string},{string}")
-	public void selects(String startdate, String enddate, String Filter_by_customer_tags, String tracking_instruction) throws InterruptedException   {
-		addWaystoEarnActionPage.startEndDate_fltrByCusTags_trackingIns(startdate, enddate, Filter_by_customer_tags, tracking_instruction);
+	@When("selects  {string}, {string},{string},{string} and uploads the banner image")
+	public void selects_and_uploads_the_banner_image(String startdate, String enddate, String filterByTags,
+			String tracking_instruction)   {
+		addWaystoEarnActionPage.startEndDate_fltrByCusTags_trackingIns(startdate, enddate, filterByTags,
+				tracking_instruction);
+
 	}
 
 	@When("enters {string} and impact details {string},{string},{string}")
-	public void enters_and_impact_details(String reward_points, String water_saved, String plastic_saved, String Trees_planted) {
+	public void enters_and_impact_details(String reward_points, String water_saved, String plastic_saved,
+			String Trees_planted) {
 		addWaystoEarnActionPage.rewardPoints_impactDetails(reward_points, water_saved, plastic_saved, Trees_planted);
 	}
 
@@ -72,14 +76,14 @@ public class Login {
 		addWaystoEarnActionPage.emailSettings_Content_CorrelatedTask(optional_email_settings, content, correlated_task);
 	}
 
-	@When("uploads the banner image and click on publish button")
-	public void uploads_the_banner_image_and_click_on_publish_button() {
-		addWaystoEarnActionPage.uploadBannerImgPublish();
+	@When("clicks on publish button")
+	public void clicks_on_publish_button() {
+		addWaystoEarnActionPage.publish();
 	}
 
 	@Then("ways to earn program is created successfully using build from scratch feature")
 	public void ways_to_earn_program_is_created_successfully_using_build_from_scratch_feature() {
-       //Validation is required
+		// Validation is required
 	}
 
 }

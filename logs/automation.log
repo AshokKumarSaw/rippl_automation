@@ -1,32 +1,119 @@
-12:27:42.802 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
-12:27:49.458 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
-12:28:56.269 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
-12:29:11.440 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
-12:46:40.541 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
-12:46:54.307 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
-12:56:25.025 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
-12:56:38.046 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
-12:59:33.342 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
-12:59:48.984 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
-14:46:49.451 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
-14:47:15.455 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
-14:48:28.385 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
-14:48:38.818 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
-14:53:16.565 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
-14:53:30.460 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
-14:58:58.720 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
-14:59:11.802 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
-15:01:41.538 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
-15:01:50.447 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
-15:06:18.800 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
-15:06:35.065 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
-15:08:12.910 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
-15:08:18.990 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
-15:38:06.644 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
-15:38:23.750 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
-15:47:03.460 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
-15:47:16.073 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
-15:51:41.589 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
-15:52:09.442 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
-15:53:13.712 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
-15:53:21.996 [main] INFO  page_objects.LoginPage - User enters valid email,clicks on Continue with Email, enters valid password and clicks on Login button
+10:22:13.215 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+10:22:27.037 [main] INFO  page_objects.LoginPage - User enters email,clicks on Continue with Email, enters password, clicks on Login button
+10:22:39.221 [main] INFO  page_objects.LandingPage - User clicks on Shopify Account Profile Logo displayed on top-right
+10:22:46.301 [main] INFO  page_objects.LandingPage - User selects the Staging May 2 Test Store 1 store from the Account dropdown
+10:22:48.471 [main] INFO  page_objects.LandingPage - User clicks on Rippl Reward Staging link displayed in menu under App section for the store Staging May 2 Test Store 1
+10:22:48.987 [main] INFO  page_objects.Rippl_RewardsPage - User clicks on Hamburger icon,Program->Points->Add Ways to Earn-> Build From Scratch Template
+10:23:02.646 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Name and Short Description
+10:23:06.048 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Description
+10:23:16.459 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Start date, End date,Filter By Customer Tag and Tracking Instruction
+10:31:06.616 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+10:31:26.154 [main] INFO  page_objects.LoginPage - User enters email,clicks on Continue with Email, enters password, clicks on Login button
+10:31:35.689 [main] INFO  page_objects.LandingPage - User clicks on Shopify Account Profile Logo displayed on top-right
+10:31:41.927 [main] INFO  page_objects.LandingPage - User selects the Staging May 2 Test Store 1 store from the Account dropdown
+10:31:45.587 [main] INFO  page_objects.LandingPage - User clicks on Rippl Reward Staging link displayed in menu under App section for the store Staging May 2 Test Store 1
+10:31:46.066 [main] INFO  page_objects.Rippl_RewardsPage - User clicks on Hamburger icon,Program->Points->Add Ways to Earn-> Build From Scratch Template
+10:32:02.542 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Name and Short Description
+10:32:05.802 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Description
+10:32:16.310 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Start date, End date,Filter By Customer Tag and Tracking Instruction
+11:07:14.875 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+11:07:17.558 [main] INFO  page_objects.LoginPage - User enters email,clicks on Continue with Email, enters password, clicks on Login button
+11:07:50.615 [main] INFO  page_objects.LandingPage - User clicks on Shopify Account Profile Logo displayed on top-right
+11:07:56.177 [main] INFO  page_objects.LandingPage - User selects the Staging May 2 Test Store 1 store from the Account dropdown
+11:08:02.286 [main] INFO  page_objects.LandingPage - User clicks on Rippl Reward Staging link displayed in menu under App section for the store Staging May 2 Test Store 1
+11:08:02.807 [main] INFO  page_objects.Rippl_RewardsPage - User clicks on Hamburger icon,Program->Points->Add Ways to Earn-> Build From Scratch Template
+11:09:32.327 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+11:09:49.727 [main] INFO  page_objects.LoginPage - User enters email,clicks on Continue with Email, enters password, clicks on Login button
+11:09:59.445 [main] INFO  page_objects.LandingPage - User clicks on Shopify Account Profile Logo displayed on top-right
+11:10:05.214 [main] INFO  page_objects.LandingPage - User selects the Staging May 2 Test Store 1 store from the Account dropdown
+11:10:07.781 [main] INFO  page_objects.LandingPage - User clicks on Rippl Reward Staging link displayed in menu under App section for the store Staging May 2 Test Store 1
+11:10:08.237 [main] INFO  page_objects.Rippl_RewardsPage - User clicks on Hamburger icon,Program->Points->Add Ways to Earn-> Build From Scratch Template
+11:10:23.000 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Name and Short Description
+11:10:26.328 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Description
+11:10:36.890 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Start date, End date,Filter By Customer Tag and Tracking Instruction
+11:44:37.008 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+11:44:56.840 [main] INFO  page_objects.LoginPage - User enters email,clicks on Continue with Email, enters password, clicks on Login button
+11:45:12.678 [main] INFO  page_objects.LandingPage - User clicks on Shopify Account Profile Logo displayed on top-right
+11:45:18.940 [main] INFO  page_objects.LandingPage - User selects the Staging May 2 Test Store 1 store from the Account dropdown
+11:45:23.899 [main] INFO  page_objects.LandingPage - User clicks on Rippl Reward Staging link displayed in menu under App section for the store Staging May 2 Test Store 1
+11:45:26.652 [main] INFO  page_objects.Rippl_RewardsPage - User clicks on Hamburger icon,Program->Points->Add Ways to Earn-> Build From Scratch Template
+11:45:39.665 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Name and Short Description
+11:45:43.726 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Description
+11:45:55.678 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Start date, End date,Filter By Customer Tag and Tracking Instruction
+11:45:58.233 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Reward Points and Impact Details
+12:32:31.803 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+12:32:41.144 [main] INFO  page_objects.LoginPage - User enters email,clicks on Continue with Email, enters password, clicks on Login button
+12:32:53.192 [main] INFO  page_objects.LandingPage - User clicks on Shopify Account Profile Logo displayed on top-right
+12:33:00.174 [main] INFO  page_objects.LandingPage - User selects the Staging May 2 Test Store 1 store from the Account dropdown
+12:33:04.063 [main] INFO  page_objects.LandingPage - User clicks on Rippl Reward Staging link displayed in menu under App section for the store Staging May 2 Test Store 1
+12:33:04.557 [main] INFO  page_objects.Rippl_RewardsPage - User clicks on Hamburger icon,Program->Points->Add Ways to Earn-> Build From Scratch Template
+12:33:16.043 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Name and Short Description
+12:33:19.636 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Description
+12:33:30.111 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Start date, End date,Filter By Customer Tag and Tracking Instruction
+12:33:32.644 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Reward Points and Impact Details
+12:33:33.831 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Optional Email, Content and Correlated Task
+12:33:36.188 [main] INFO  page_objects.AddWaystoEarnActionPage - User uploads banner Image and publishes the Ways to Earn Action
+13:06:38.283 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+13:06:52.972 [main] INFO  page_objects.LoginPage - User enters email,clicks on Continue with Email, enters password, clicks on Login button
+13:07:03.136 [main] INFO  page_objects.LandingPage - User clicks on Shopify Account Profile Logo displayed on top-right
+13:09:21.578 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+13:09:41.588 [main] INFO  page_objects.LoginPage - User enters email,clicks on Continue with Email, enters password, clicks on Login button
+13:09:54.032 [main] INFO  page_objects.LandingPage - User clicks on Shopify Account Profile Logo displayed on top-right
+13:10:53.433 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+13:11:03.763 [main] INFO  page_objects.LoginPage - User enters email,clicks on Continue with Email, enters password, clicks on Login button
+13:11:14.982 [main] INFO  page_objects.LandingPage - User clicks on Shopify Account Profile Logo displayed on top-right
+13:11:22.147 [main] INFO  page_objects.LandingPage - User selects the Staging May 2 Test Store 1 store from the Account dropdown
+13:11:23.954 [main] INFO  page_objects.LandingPage - User clicks on Rippl Reward Staging link displayed in menu under App section for the store Staging May 2 Test Store 1
+13:11:24.597 [main] INFO  page_objects.Rippl_RewardsPage - User clicks on Hamburger icon,Program->Points->Add Ways to Earn-> Build From Scratch Template
+13:11:38.662 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Name and Short Description
+13:11:44.837 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Description
+13:11:58.887 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Start date, End date,Filter By Customer Tag and Tracking Instruction
+13:12:01.344 [main] INFO  page_objects.AddWaystoEarnActionPage - User uploads banner Image
+13:14:17.539 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+13:14:33.501 [main] INFO  page_objects.LoginPage - User enters email,clicks on Continue with Email, enters password, clicks on Login button
+13:26:05.027 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+13:26:16.434 [main] INFO  page_objects.LoginPage - User enters email,clicks on Continue with Email, enters password, clicks on Login button
+13:26:28.418 [main] INFO  page_objects.LandingPage - User clicks on Shopify Account Profile Logo displayed on top-right
+13:26:33.488 [main] INFO  page_objects.LandingPage - User selects the Staging May 2 Test Store 1 store from the Account dropdown
+13:26:38.494 [main] INFO  page_objects.LandingPage - User clicks on Rippl Reward Staging link displayed in menu under App section for the store Staging May 2 Test Store 1
+13:26:39.155 [main] INFO  page_objects.Rippl_RewardsPage - User clicks on Hamburger icon,Program->Points->Add Ways to Earn-> Build From Scratch Template
+13:26:52.124 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Name and Short Description
+13:26:55.451 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Description
+13:27:05.901 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Start date, End date,Filter By Customer Tag and Tracking Instruction
+13:27:08.356 [main] INFO  page_objects.AddWaystoEarnActionPage - User uploads banner Image
+13:38:14.396 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+13:38:24.819 [main] INFO  page_objects.LoginPage - User enters email,clicks on Continue with Email, enters password, clicks on Login button
+13:38:35.932 [main] INFO  page_objects.LandingPage - User clicks on Shopify Account Profile Logo displayed on top-right
+13:38:42.851 [main] INFO  page_objects.LandingPage - User selects the Staging May 2 Test Store 1 store from the Account dropdown
+13:38:46.372 [main] INFO  page_objects.LandingPage - User clicks on Rippl Reward Staging link displayed in menu under App section for the store Staging May 2 Test Store 1
+13:38:47.059 [main] INFO  page_objects.Rippl_RewardsPage - User clicks on Hamburger icon,Program->Points->Add Ways to Earn-> Build From Scratch Template
+13:39:14.597 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Name and Short Description
+13:39:18.982 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Description
+13:39:29.430 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Start date, End date,Filter By Customer Tag, uploads banner Image and Tracking Instruction
+14:32:39.200 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+14:32:51.193 [main] INFO  page_objects.LoginPage - User enters email,clicks on Continue with Email, enters password, clicks on Login button
+14:33:02.874 [main] INFO  page_objects.LandingPage - User clicks on Shopify Account Profile Logo displayed on top-right
+14:33:09.810 [main] INFO  page_objects.LandingPage - User selects the Staging May 2 Test Store 1 store from the Account dropdown
+14:33:12.885 [main] INFO  page_objects.LandingPage - User clicks on Rippl Reward Staging link displayed in menu under App section for the store Staging May 2 Test Store 1
+14:33:13.423 [main] INFO  page_objects.Rippl_RewardsPage - User clicks on Hamburger icon,Program->Points->Add Ways to Earn-> Build From Scratch Template
+14:33:27.075 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Name and Short Description
+14:33:30.591 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Description
+14:33:41.302 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Start date, End date,Filter By Customer Tag, uploads banner Image and Tracking Instruction
+14:42:37.256 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+14:42:45.490 [main] INFO  page_objects.LoginPage - User enters email,clicks on Continue with Email, enters password, clicks on Login button
+14:42:56.176 [main] INFO  page_objects.LandingPage - User clicks on Shopify Account Profile Logo displayed on top-right
+14:43:03.613 [main] INFO  page_objects.LandingPage - User selects the Staging May 2 Test Store 1 store from the Account dropdown
+14:43:07.573 [main] INFO  page_objects.LandingPage - User clicks on Rippl Reward Staging link displayed in menu under App section for the store Staging May 2 Test Store 1
+14:43:08.205 [main] INFO  page_objects.Rippl_RewardsPage - User clicks on Hamburger icon,Program->Points->Add Ways to Earn-> Build From Scratch Template
+14:43:23.092 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Name and Short Description
+14:43:27.129 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Description
+14:43:37.759 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Start date, End date,Filter By Customer Tag, uploads banner Image and Tracking Instruction
+14:50:32.832 [main] INFO  page_objects.LoginPage - User clicks Login Link on Shopify page 
+14:50:50.213 [main] INFO  page_objects.LoginPage - User enters email,clicks on Continue with Email, enters password, clicks on Login button
+14:51:00.907 [main] INFO  page_objects.LandingPage - User clicks on Shopify Account Profile Logo displayed on top-right
+14:51:06.825 [main] INFO  page_objects.LandingPage - User selects the Staging May 2 Test Store 1 store from the Account dropdown
+14:51:10.301 [main] INFO  page_objects.LandingPage - User clicks on Rippl Reward Staging link displayed in menu under App section for the store Staging May 2 Test Store 1
+14:51:10.698 [main] INFO  page_objects.Rippl_RewardsPage - User clicks on Hamburger icon,Program->Points->Add Ways to Earn-> Build From Scratch Template
+14:51:25.188 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Name and Short Description
+14:51:28.497 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Action Description
+14:51:39.191 [main] INFO  page_objects.AddWaystoEarnActionPage - User enters Start date, End date,Filter By Customer Tag, uploads banner Image and Tracking Instruction

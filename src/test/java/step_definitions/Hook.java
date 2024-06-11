@@ -18,7 +18,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import page_objects.LoginPage;
 
 public class Hook {
 	public static WebDriver driver;
@@ -66,14 +65,15 @@ public class Hook {
 	 */
 	
 	@After
-	public void tearDown(Scenario scenario) {
+	public void screenshot(Scenario scenario) {
 		System.out.println("Scenario status ======>" + scenario.getStatus());
 		if (scenario.isFailed()) {
-			byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+		final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 			scenario.attach(screenshot, "image/png", scenario.getName());
 		}
 		driver.quit();
 	}
+	
 
 	
 }
