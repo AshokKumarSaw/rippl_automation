@@ -8,12 +8,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import utilities.ActionUtil;
-
-public class LandingPage extends BasePage {
+public class ShopifyLandingPage extends BasePage {
 	public WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-	public LandingPage(WebDriver driver) {
+	public ShopifyLandingPage(WebDriver driver) {
 		super(driver);
 	}
 

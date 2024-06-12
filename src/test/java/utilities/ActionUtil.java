@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 
 public class ActionUtil {
 	public static Logger logger = LogManager.getLogger(ActionUtil.class);
+	
 
 	public static boolean isElementDisplayed(WebElement element) {
 		try {

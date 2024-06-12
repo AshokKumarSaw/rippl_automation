@@ -6,7 +6,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = ("src/test/java/feature_files/"),
+		features = ("src/test/java/feature_files"),
 //features="@target/rerun.txt",   // Runs only failures
 glue = "step_definitions", 
 stepNotifications = true, 
@@ -16,7 +16,7 @@ plugin = {
 }, 
 dryRun = false, 
 monochrome = true, 
-tags = "@WaystoEarn"
+tags = "@buildfromscratch"
 
 )
 public class TestRunner {

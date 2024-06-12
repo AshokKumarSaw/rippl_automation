@@ -1,0 +1,8 @@
+page_objects\AddWaystoEarnActionPage.class
+step_definitions\Build_From_Scratch.class
+page_objects\LandingPage.class
+step_definitions\Hook.class
+testRunner\TestRunner.class
+utilities\ActionUtil.class
+page_objects\BasePage.class
+page_objects\Rippl_RewardsPage.class

@@ -14,11 +14,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.ActionUtil;
 
-public class AddWaystoEarnActionPage extends BasePage {
+public class BuildFromScratchPage extends BasePage {
 	public WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(20));
 	Actions action = new Actions(driver);
 
-	public AddWaystoEarnActionPage(WebDriver driver) {
+	public BuildFromScratchPage(WebDriver driver) {
 		super(driver);
 	}
 

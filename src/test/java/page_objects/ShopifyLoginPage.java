@@ -1,22 +1,19 @@
 package page_objects;
 
 import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import step_definitions.Hook;
 
-import utilities.ActionUtil;
-
-public class LoginPage extends BasePage {
+public class ShopifyLoginPage extends BasePage {
 	public WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-	public LoginPage(WebDriver driver) {
+	public ShopifyLoginPage(WebDriver driver) {
 		super(driver);
 	}
-
 	// Elements
 
 	@FindBy(xpath = "//a[@class='whitespace-nowrap hover:underline text-white']")
@@ -34,31 +31,24 @@ public class LoginPage extends BasePage {
 	@FindBy(xpath = "//button[@name='commit']")
 	WebElement btnLogin;
 
-	// Methods
-
-	/**
-	 * The user clicks on the Login from the Shopify home page.
-	 */
-
-	public void clickShopifyLoginLnk() {
-		logger.info("User clicks Login Link on Shopify page ");
-		explicitWait.until(ExpectedConditions.elementToBeClickable(lnkLogin)).click();
-
-	}
-
-	/**
-	 * User Logs in into the Shopify application
+	/*
+	 * User logs in into shopify application
 	 * 
-	 * @param email
-	 * @param password
+	 * @param shopify_email
+	 * 
+	 * @param shopify_password
 	 */
-	public void loginIntoShopify(String email, String password) throws InterruptedException {
-		logger.info("User enters email,clicks on Continue with Email, enters password, clicks on Login button");
 
-		explicitWait.until(ExpectedConditions.elementToBeClickable(txtEmail)).sendKeys(email);
+	public void loginShopify(String shopify_email, String shopify_password) {
+		explicitWait.until(ExpectedConditions.elementToBeClickable(lnkLogin)).click();
+		logger.info("User clicks Login Link on Shopify page ");
+		explicitWait.until(ExpectedConditions.elementToBeClickable(txtEmail))
+				.sendKeys(Hook.properties.getProperty("shopify_email"));
 		explicitWait.until(ExpectedConditions.elementToBeClickable(btnContinueWithEmail)).click();
-		explicitWait.until(ExpectedConditions.elementToBeClickable(txtPassword)).sendKeys(password);
+		explicitWait.until(ExpectedConditions.elementToBeClickable(txtPassword))
+				.sendKeys(Hook.properties.getProperty("shopify_password"));
 		explicitWait.until(ExpectedConditions.elementToBeClickable(btnLogin)).click();
+		logger.info("User enters shopify email,clicks on Continue with Email, enters password, clicks on Login button");
 
 	}
 
