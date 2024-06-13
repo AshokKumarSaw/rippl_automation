@@ -5,3 +5,21 @@
 18:35:49.439 [main] INFO  page_objects.ShopifyLoginPage - User clicks Login Link on Shopify page 
 23:52:04.799 [main] INFO  page_objects.ShopifyLoginPage - User clicks Login Link on Shopify page 
 23:52:24.278 [main] INFO  page_objects.ShopifyLoginPage - User enters shopify email,clicks on Continue with Email, enters password, clicks on Login button
+11:16:36.653 [main] INFO  page_objects.ShopifyLoginPage - User clicks Login Link on Shopify page 
+11:16:47.265 [main] INFO  page_objects.ShopifyLoginPage - User enters shopify email,clicks on Continue with Email, enters password, clicks on Login button
+11:34:25.693 [main] INFO  page_objects.ShopifyLoginPage - User clicks Login Link on Shopify page 
+11:34:34.657 [main] INFO  page_objects.ShopifyLoginPage - User enters shopify email,clicks on Continue with Email, enters password, clicks on Login button
+13:05:00.387 [main] INFO  page_objects.ShopifyLoginPage - User clicks Login Link on Shopify page 
+13:05:12.559 [main] INFO  page_objects.ShopifyLoginPage - User enters shopify email,clicks on Continue with Email, enters password, clicks on Login button
+14:26:36.387 [main] INFO  page_objects.ShopifyLoginPage - User clicks Login Link on Shopify page 
+14:26:47.130 [main] INFO  page_objects.ShopifyLoginPage - User enters shopify email,clicks on Continue with Email, enters password, clicks on Login button
+14:26:55.602 [main] INFO  page_objects.ShopifyLandingPage - User clicks on Rippl Reward Staging link displayed in menu under App section for the store Staging May 2 Test Store 1
+14:26:56.431 [main] INFO  page_objects.Rippl_RewardsPage - User clicks on Hamburger icon,Program->Points->Add Ways to Earn-> Build From Scratch Template
+14:29:52.973 [main] INFO  page_objects.ShopifyLoginPage - User clicks Login Link on Shopify page 
+14:30:03.427 [main] INFO  page_objects.ShopifyLoginPage - User enters shopify email,clicks on Continue with Email, enters password, clicks on Login button
+14:30:12.645 [main] INFO  page_objects.ShopifyLandingPage - User clicks on Rippl Reward Staging link displayed in menu under App section for the store Staging May 2 Test Store 1
+14:30:13.144 [main] INFO  page_objects.Rippl_RewardsPage - User clicks on Hamburger icon,Program->Points->Add Ways to Earn-> Build From Scratch Template
+14:30:28.922 [main] INFO  page_objects.BuildFromScratchPage - User enters Action Name and Short Description
+14:30:32.720 [main] INFO  page_objects.BuildFromScratchPage - User enters Action Description
+14:30:43.430 [main] INFO  page_objects.BuildFromScratchPage - User enters Start date, End date,Filter By Customer Tag, uploads banner Image and Tracking Instruction
+14:30:46.730 [main] INFO  page_objects.BuildFromScratchPage - User enters Reward Points and Impact Details

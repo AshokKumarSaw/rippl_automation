@@ -1,6 +1,7 @@
 package page_objects;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +19,9 @@ public class ShopifyLandingPage extends BasePage {
 	@FindBy(xpath = "//span[@class='Polaris-Avatar__Initials']//*[name()='svg']")
 	WebElement actLogo;
 
+	@FindBy(xpath = "//body/div[@id='app']/div[@id='PolarisPortalsContainer']/div[1]")
+	WebElement drpdwnLogoOptions;
+
 	@FindBy(xpath = "//div[normalize-space()='Staging May 2 Test Store 1']")
 	WebElement lnkStore;
 
@@ -29,24 +33,33 @@ public class ShopifyLandingPage extends BasePage {
 	 */
 
 	public void ShopifyDashboard() {
-		logger.info("User clicks on Shopify Account Profile Logo displayed on top-right");
-		explicitWait.until(ExpectedConditions.elementToBeClickable(actLogo)).click();
 
 	}
 
 	/**
 	 * User selects the store from My_Account dropdown
 	 */
-	public void selectStore() {
-		logger.info("User selects the Staging May 2 Test Store 1 store from the Account dropdown");
-		explicitWait.until(ExpectedConditions.elementToBeClickable(lnkStore)).click();
-		driver.manage().window().fullscreen();
+	public void selectStore(String store_name) {
+		explicitWait.until(ExpectedConditions.elementToBeClickable(actLogo)).click();
+		
+//		List<WebElement> drpdwnList = explicitWait
+//				.until(ExpectedConditions.visibilityOfAllElements(drpdwnLogoOptions));
+//
+//		for (WebElement storename : drpdwnList) {
+//			if (storename.getText().equals(store_name)) {
+//				storename.click();
+//				break;
+//			}
+//		}
+
+		 explicitWait.until(ExpectedConditions.elementToBeClickable(lnkStore)).click();
+		 driver.manage().window().fullscreen();
 	}
 
 	/**
 	 * User clicks on Rippl Reward Staging Link displayed under App
 	 */
-	public void ripplRewardStaging() {
+	public void clickRipplRewardStagingLnk() {
 		logger.info(
 				"User clicks on Rippl Reward Staging link displayed in menu under App section for the store Staging May 2 Test Store 1");
 		explicitWait.until(ExpectedConditions.elementToBeClickable(lnkRipplRewardStaging)).click();

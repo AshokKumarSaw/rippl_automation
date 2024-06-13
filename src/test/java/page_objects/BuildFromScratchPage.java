@@ -73,44 +73,18 @@ public class BuildFromScratchPage extends BasePage {
 	@FindBy(xpath = "//button[text()='Publish' and @type='submit']")
 	WebElement btnPublish;
 
-	/**
-	 * User enters name and short description for the Ways to Earn Challenge
-	 * 
-	 * @param name
-	 * @param short_description
-	 */
+	public void buildFromScratchFormData(String challenge_name, String short_description, String action_description,
+			String startdate, String enddate, String filterByTags, String tracking_instruction, String reward_points,
+			String water_saved, String plastic_saved, String Trees_planted, String optional_email_settings,
+			String content, String correlated_task) {
 
-	public void nameShortDescription(String name, String short_description) {
 		logger.info("User enters Action Name and Short Description");
 		driver.switchTo().defaultContent();
 		driver.switchTo().frame("app-iframe");
-		explicitWait.until(ExpectedConditions.elementToBeClickable(txtName)).sendKeys(name);
+		explicitWait.until(ExpectedConditions.elementToBeClickable(txtName)).sendKeys(challenge_name);
 		explicitWait.until(ExpectedConditions.elementToBeClickable(txtShortDescription)).sendKeys(short_description);
-
-	}
-
-	/**
-	 * User enters Action Description for the Ways to Earn Challenge
-	 * 
-	 * @param action_description
-	 */
-	public void actionDescription(String action_description) {
 		logger.info("User enters Action Description");
 		explicitWait.until(ExpectedConditions.elementToBeClickable(txtActionDescription)).sendKeys(action_description);
-
-	}
-
-	/**
-	 * User enters start date, end date, customer tags ,Uploads banner Image and
-	 * tracking instruction for the challenge
-	 * 
-	 * @param startdate
-	 * @param enddate
-	 * @param Filter_by_customer_tags
-	 * @param tracking_instruction
-	 */
-	public void startEndDate_fltrByCusTags_trackingIns(String startdate, String enddate, String filterByTags,
-			String tracking_instruction) {
 		logger.info(
 				"User enters Start date, End date,Filter By Customer Tag, uploads banner Image and Tracking Instruction");
 
@@ -129,24 +103,6 @@ public class BuildFromScratchPage extends BasePage {
 		btnUploadBanner.sendKeys(System.getProperty("user.dir") + "\\image\\banner_img.jpg");
 		explicitWait.until(ExpectedConditions.elementToBeClickable(btnBannerCrop)).click();
 
-//		explicitWait.until(ExpectedConditions.elementToBeClickable(btnUploadBanner))
-//				.sendKeys(System.getProperty("user.dir") + "\\image\\banner_img.jpg");
-//		explicitWait.until(ExpectedConditions.elementToBeClickable(btnBannerCrop)).click();
-
-	}
-
-	/**
-	 * User enters Reward points and Impact details for the challenge
-	 * 
-	 * @param reward_points
-	 * @param water_saved
-	 * @param plastic_saved
-	 * @param Trees_planted
-	 */
-
-	public void rewardPoints_impactDetails(String reward_points, String water_saved, String plastic_saved,
-			String Trees_planted) {
-
 		logger.info("User enters Reward Points and Impact Details");
 
 		explicitWait.until(ExpectedConditions.elementToBeClickable(inputPoints)).sendKeys(reward_points);
@@ -156,27 +112,6 @@ public class BuildFromScratchPage extends BasePage {
 		explicitWait.until(ExpectedConditions.elementToBeClickable(inputKgsOfPlastic)).sendKeys(plastic_saved);
 
 		explicitWait.until(ExpectedConditions.elementToBeClickable(inputTreesPlanted)).sendKeys(Trees_planted);
-
-	}
-
-	/**
-	 * User enters Optional Email, Content and Correlated Task for the challenge
-	 * 
-	 * @param optional_email_settings
-	 * @param content
-	 * @param correlated_task
-	 */
-
-	public void emailSettings_Content_CorrelatedTask(String optional_email_settings, String content,
-			String correlated_task) {
-		logger.info("User enters Optional Email, Content and Correlated Task");
-
-		explicitWait.until(ExpectedConditions.elementToBeClickable(optionalEmailSettings))
-				.sendKeys(optional_email_settings);
-
-		explicitWait.until(ExpectedConditions.elementToBeClickable(txtcontent)).sendKeys(content);
-
-		explicitWait.until(ExpectedConditions.elementToBeClickable(txtCorelatedTask)).sendKeys(correlated_task);
 
 	}
 
