@@ -11,7 +11,7 @@ Feature: Ways to Earn
     And navigates to Add Ways to Earn - Build From Scratch
     And fills up the build from scratch form with appropriate data <challenge_name>, <short_description>, <action_description>, <startdate>, <enddate>, <filterByTags>, <tracking_instruction>, <reward_points>, <water_saved>, <plastic_saved>, <trees_planted>, <optional_email_settings>, <content>, <correlated_task>
     And uploads banner image and publishes the challenge
-    Then verify created challenge is displayed in Ways to Earn challenges list
+    Then verify created <challenge_name> is displayed in Ways to Earn challenges list
     And verify created challenge contains exactly the same details filled in the form during creation  <challenge_name>, <short_description>, <action_description>, <startdate>, <enddate>, <filterByTags>, <tracking_instruction>, <reward_points>, <water_saved>, <plastic_saved>, <trees_planted>, <optional_email_settings>, <content>, <correlated_task>
 
     Examples: 

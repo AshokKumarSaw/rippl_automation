@@ -1,6 +1,7 @@
 package page_objects;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,6 +32,15 @@ public class Rippl_RewardsPage extends BasePage {
 
 	@FindBy(xpath = "//h2[contains(text(),'Build From Scratch')]")
 	WebElement btnBuildFromScratch;
+	
+	@FindBy(xpath = "//div[@class=\"MuiCardContent-root css-1vq0w4j\"]")
+	WebElement listWaysToEarn;
+	
+	@FindBy(xpath = "//button[contains(text(),'Edit')]")
+	WebElement btnEditWaysToEarnChallenge;
+	
+	
+	
 
 	/**
 	 * User navigates to Hamburger icon, program->Points->Add Ways to Earn->Bild
@@ -49,5 +59,24 @@ public class Rippl_RewardsPage extends BasePage {
 		explicitWait.until(ExpectedConditions.elementToBeClickable(btnBuildFromScratch)).click();
 
 	}
+	
+	public void verifyNewlyCreatedChallengeFromWaysToEarnList(String challenge_name)
+	{
+		List<WebElement> waystoearnlist = explicitWait
+		.until(ExpectedConditions.visibilityOfAllElements(listWaysToEarn));
+		
+
+for (WebElement challengename : waystoearnlist) {
+//	System.out.println(challengename.getText()+"........................");
+	if (challengename.getText().equals(challenge_name)) {
+		btnEditWaysToEarnChallenge.click();
+		break;
+	}
+}
+
+		
+	}
+	
+	
 
 }

@@ -1,7 +1,9 @@
 package page_objects;
 
 import java.time.Duration;
+import java.util.Map;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -114,6 +116,24 @@ public class BuildFromScratchPage extends BasePage {
 		explicitWait.until(ExpectedConditions.elementToBeClickable(inputTreesPlanted)).sendKeys(Trees_planted);
 
 	}
+	
+	public void verifyChallengeDetails(Map<String, String> challengeDetails) {
+        Assert.assertEquals(challengeDetails.get("challenge_name"), txtName.getText());
+        Assert.assertEquals(challengeDetails.get("short_description"), txtShortDescription.getText());
+        Assert.assertEquals(challengeDetails.get("action_description"), txtActionDescription.getText());
+        Assert.assertEquals(challengeDetails.get("startdate"), inputStartDate.getText());
+        Assert.assertEquals(challengeDetails.get("enddate"), inputEndDate.getText());
+        Assert.assertEquals(challengeDetails.get("filterByTags"), drpDwnFltrByCusTags.getText());
+        Assert.assertEquals(challengeDetails.get("tracking_instruction"), txtTrackingInstruction.getText());
+        Assert.assertEquals(challengeDetails.get("reward_points"), inputPoints.getText());
+        Assert.assertEquals(challengeDetails.get("water_saved"), inputGallonsOfWater.getText());
+        Assert.assertEquals(challengeDetails.get("plastic_saved"), inputKgsOfPlastic.getText());
+        Assert.assertEquals(challengeDetails.get("trees_planted"), inputTreesPlanted.getText());
+        Assert.assertEquals(challengeDetails.get("optional_email_settings"), optionalEmailSettings.getText());
+        Assert.assertEquals(challengeDetails.get("content"), txtcontent.getText());
+        Assert.assertEquals(challengeDetails.get("correlated_task"), txtCorelatedTask.getText());
+    }
+
 
 	/**
 	 * User publishes the Ways to Earn Challenge

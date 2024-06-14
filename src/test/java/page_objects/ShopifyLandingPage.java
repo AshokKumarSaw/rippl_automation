@@ -41,19 +41,18 @@ public class ShopifyLandingPage extends BasePage {
 	 */
 	public void selectStore(String store_name) {
 		explicitWait.until(ExpectedConditions.elementToBeClickable(actLogo)).click();
-		
-//		List<WebElement> drpdwnList = explicitWait
-//				.until(ExpectedConditions.visibilityOfAllElements(drpdwnLogoOptions));
-//
-//		for (WebElement storename : drpdwnList) {
-//			if (storename.getText().equals(store_name)) {
-//				storename.click();
-//				break;
-//			}
-//		}
 
-		 explicitWait.until(ExpectedConditions.elementToBeClickable(lnkStore)).click();
-		 driver.manage().window().fullscreen();
+		List<WebElement> drpdwnList = explicitWait.until(ExpectedConditions.visibilityOfAllElements(drpdwnLogoOptions));
+
+		for (WebElement storename : drpdwnList) {
+			if (storename.getText().equals(store_name)) {
+				storename.click();
+				break;
+			}
+		}
+
+//		 explicitWait.until(ExpectedConditions.elementToBeClickable(lnkStore)).click();
+//		 driver.manage().window().fullscreen();
 	}
 
 	/**
