@@ -117,21 +117,22 @@ public class BuildFromScratchPage extends BasePage {
 
 	}
 	
-	public void verifyChallengeDetails(Map<String, String> challengeDetails) {
-        Assert.assertEquals(challengeDetails.get("challenge_name"), txtName.getText());
-        Assert.assertEquals(challengeDetails.get("short_description"), txtShortDescription.getText());
-        Assert.assertEquals(challengeDetails.get("action_description"), txtActionDescription.getText());
-        Assert.assertEquals(challengeDetails.get("startdate"), inputStartDate.getText());
-        Assert.assertEquals(challengeDetails.get("enddate"), inputEndDate.getText());
-        Assert.assertEquals(challengeDetails.get("filterByTags"), drpDwnFltrByCusTags.getText());
-        Assert.assertEquals(challengeDetails.get("tracking_instruction"), txtTrackingInstruction.getText());
-        Assert.assertEquals(challengeDetails.get("reward_points"), inputPoints.getText());
-        Assert.assertEquals(challengeDetails.get("water_saved"), inputGallonsOfWater.getText());
-        Assert.assertEquals(challengeDetails.get("plastic_saved"), inputKgsOfPlastic.getText());
-        Assert.assertEquals(challengeDetails.get("trees_planted"), inputTreesPlanted.getText());
-        Assert.assertEquals(challengeDetails.get("optional_email_settings"), optionalEmailSettings.getText());
-        Assert.assertEquals(challengeDetails.get("content"), txtcontent.getText());
-        Assert.assertEquals(challengeDetails.get("correlated_task"), txtCorelatedTask.getText());
+	public void verifyChallengeDetails(Map<String, String> challenge_Details) {
+        Assert.assertEquals(challenge_Details.get("challengeName"), txtName.getText());
+        Assert.assertEquals(challenge_Details.get("shortDescription"), txtShortDescription.getText());
+        Assert.assertEquals(challenge_Details.get("actionDescription"), txtActionDescription.getText());
+        Assert.assertEquals(challenge_Details.get("startDate"), inputStartDate.getText());
+        Assert.assertEquals(challenge_Details.get("endDate"), inputEndDate.getText());
+        Assert.assertEquals(challenge_Details.get("filter_By_Tags"), drpDwnFltrByCusTags.getText());
+        Assert.assertEquals(challenge_Details.get("trackinginstruction"), txtTrackingInstruction.getText());
+        Assert.assertEquals(challenge_Details.get("rewardpoints"), inputPoints.getText());
+        Assert.assertEquals(challenge_Details.get("watersaved"), inputGallonsOfWater.getText());
+        Assert.assertEquals(challenge_Details.get("plasticsaved"), inputKgsOfPlastic.getText());
+        Assert.assertEquals(challenge_Details.get("treesplanted"), inputTreesPlanted.getText());
+        Assert.assertEquals(challenge_Details.get("optionalEmailSettings"), optionalEmailSettings.getText());
+        Assert.assertEquals(challenge_Details.get("Content"), txtcontent.getText());
+        Assert.assertEquals(challenge_Details.get("correlatedTask"), txtCorelatedTask.getText());
+        
     }
 
 
