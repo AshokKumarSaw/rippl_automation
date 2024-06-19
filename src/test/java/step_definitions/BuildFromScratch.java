@@ -21,7 +21,12 @@ public class BuildFromScratch {
 
 	@Given("user is on shopify dashboard {string}, {string}")
 	public void user_is_on_shopify_dashboard(String shopify_email, String shopify_password) {
-		shopifyLoginPage.loginShopify(shopify_email, shopify_password);
+
+		shopifyLoginPage.clickShopifyLoginLnk();
+		shopifyLoginPage.enterShopifyEmail(shopify_email);
+		shopifyLoginPage.clickContinueWithEmail();
+		shopifyLoginPage.enterShopifyPassword(shopify_password);
+		shopifyLoginPage.clickShopifyLoginBtn();
 	}
 
 	@When("user selects the store {string}")
@@ -36,7 +41,13 @@ public class BuildFromScratch {
 
 	@When("navigates to Add Ways to Earn - Build From Scratch")
 	public void navigates_to_add_ways_to_earn_build_from_scratch() {
-		rippl_RewardsPage.navigateToBuildFromScratchTemplate();
+
+		rippl_RewardsPage.clickHamburgerIcon();
+		rippl_RewardsPage.clickProgramDrpdwn();
+		rippl_RewardsPage.clickPoints();
+		rippl_RewardsPage.clickAddWaysToEarn();
+		rippl_RewardsPage.clickBuildFromScratch();
+
 	}
 
 	@When("fills up the build from scratch form with appropriate data {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}, {string}")
@@ -44,9 +55,22 @@ public class BuildFromScratch {
 			String short_description, String action_description, String startdate, String enddate, String filterByTags,
 			String tracking_instruction, String reward_points, String water_saved, String plastic_saved,
 			String Trees_planted, String optional_email_settings, String content, String correlated_task) {
-		buildFromScratchPage.buildFromScratchFormData(challenge_name, short_description, action_description, startdate,
-				enddate, filterByTags, tracking_instruction, reward_points, water_saved, plastic_saved, Trees_planted,
-				optional_email_settings, content, correlated_task);
+
+		buildFromScratchPage.randomChallengeName(challenge_name);
+		buildFromScratchPage.enterShortDescription(short_description);
+		buildFromScratchPage.enterActionDescription(action_description);
+		buildFromScratchPage.enterStartDate(startdate);
+		buildFromScratchPage.enterEndDate(enddate);
+		buildFromScratchPage.selectFltrByCusTag(filterByTags);
+		buildFromScratchPage.enterTrackingInstruction(tracking_instruction);
+		buildFromScratchPage.uploadBannerImage();
+		buildFromScratchPage.enterRewardPoint(reward_points);
+		buildFromScratchPage.enterImpactOne(water_saved);
+		buildFromScratchPage.enterImpactTwo(plastic_saved);
+		buildFromScratchPage.enterImpactThree(Trees_planted);
+		buildFromScratchPage.enterOptionalEmailSettings(optional_email_settings);
+		buildFromScratchPage.enterContent(content);
+		buildFromScratchPage.enterCorelatedTask(correlated_task);
 
 	}
 
@@ -83,6 +107,80 @@ public class BuildFromScratch {
 		challengeDetails.put("Content", content);
 		challengeDetails.put("correlatedTask", correlated_task);
 		buildFromScratchPage.verifyChallengeDetails(challengeDetails);
+
+	}
+
+	@Then("verify the created {string} is visible on user dash widget under Actions for Base_Tier customers {string}")
+	public void verify_the_created_is_visible_on_user_dash_widget_under_actions_for_base_tier_customers(String string,
+			String string2) {
+
+	}
+
+	@Then("verify user can view the challenge {string} in widget dash only if the challenege status <challenge_status> is set as active")
+	public void verify_user_can_view_the_challenge_in_widget_dash_only_if_the_challenege_status_challenge_status_is_set_as_active(
+			String string) {
+
+	}
+
+	@Then("verify user is assigned and able to view base tier {string} by default in widget dash")
+	public void verify_user_is_assigned_and_able_to_view_base_tier_by_default_in_widget_dash(String string) {
+
+	}
+
+	@Then("verify same {string} is visible on user dash widget under Actions just below the {string}")
+	public void verify_same_is_visible_on_user_dash_widget_under_actions_just_below_the(String string, String string2) {
+
+	}
+
+	@Then("verify same {string} is visible under details when user selects the {string}")
+	public void verify_same_is_visible_under_details_when_user_selects_the(String string, String string2) {
+
+	}
+
+	@Then("verify user can view same {string} in widget dash while completing the challenge set during challenge creation")
+	public void verify_user_can_view_same_in_widget_dash_while_completing_the_challenge_set_during_challenge_creation(
+			String string) {
+
+	}
+
+	@Then("verify user is able to complete the {string} only once")
+	public void verify_user_is_able_to_complete_the_only_once(String string) {
+
+	}
+
+	@Then("verify users account is credited with the same {string} on completing the {string} which was configured")
+	public void verify_users_account_is_credited_with_the_same_on_completing_the_which_was_configured(String string,
+			String string2) {
+
+	}
+
+	@Then("verify on approving the completed action, a {string} configured in the challenge is created in the Tasks")
+	public void verify_on_approving_the_completed_action_a_configured_in_the_challenge_is_created_in_the_tasks(
+			String string) {
+
+	}
+
+	@Then("verify imapct reward point {string} should only be credited to the users account if the action is approved")
+	public void verify_imapct_reward_point_should_only_be_credited_to_the_users_account_if_the_action_is_approved(
+			String string) {
+
+	}
+
+	@Then("verify on completing an action {string} a confirmation email should be sent to the registered users email address")
+	public void verify_on_completing_an_action_a_confirmation_email_should_be_sent_to_the_registered_users_email_address(
+			String string) {
+
+	}
+
+	@Then("verify user can not view the challenge {string} in widget dash if the challenege status <challenge_status> is set as Inactive")
+	public void verify_user_can_not_view_the_challenge_in_widget_dash_if_the_challenege_status_challenge_status_is_set_as_inactive(
+			String string) {
+
+	}
+
+	@Then("verify user can not view the challenge {string} in widget dash after the challenge is expired {string}")
+	public void verify_user_can_not_view_the_challenge_in_widget_dash_after_the_challenge_is_expired(String string,
+			String string2) {
 
 	}
 

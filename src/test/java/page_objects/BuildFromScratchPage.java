@@ -1,23 +1,21 @@
 package page_objects;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.Map;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.ActionUtil;
 
 public class BuildFromScratchPage extends BasePage {
-	public WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//	public WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(20));
 	Actions action = new Actions(driver);
 
 	public BuildFromScratchPage(WebDriver driver) {
@@ -75,66 +73,102 @@ public class BuildFromScratchPage extends BasePage {
 	@FindBy(xpath = "//button[text()='Publish' and @type='submit']")
 	WebElement btnPublish;
 
-	public void buildFromScratchFormData(String challenge_name, String short_description, String action_description,
-			String startdate, String enddate, String filterByTags, String tracking_instruction, String reward_points,
-			String water_saved, String plastic_saved, String Trees_planted, String optional_email_settings,
-			String content, String correlated_task) {
+	public void randomChallengeName(String challenge_name) {
+		String challengeName = ActionUtil.generateRandomChallengeName();
+		ActionUtil.sendKeysWhenClickable(driver, txtName, challengeName, Duration.ofSeconds(10));
+	}
 
-		logger.info("User enters Action Name and Short Description");
-		driver.switchTo().defaultContent();
-		driver.switchTo().frame("app-iframe");
-		explicitWait.until(ExpectedConditions.elementToBeClickable(txtName)).sendKeys(challenge_name);
-		explicitWait.until(ExpectedConditions.elementToBeClickable(txtShortDescription)).sendKeys(short_description);
-		logger.info("User enters Action Description");
-		explicitWait.until(ExpectedConditions.elementToBeClickable(txtActionDescription)).sendKeys(action_description);
-		logger.info(
-				"User enters Start date, End date,Filter By Customer Tag, uploads banner Image and Tracking Instruction");
+	public void enterShortDescription(String short_description) {
+		ActionUtil.sendKeysWhenClickable(driver, txtShortDescription, short_description, Duration.ofSeconds(10));
+	}
 
-		explicitWait.until(ExpectedConditions.elementToBeClickable(inputStartDate)).sendKeys(startdate);
+	public void enterActionDescription(String action_description) {
+		ActionUtil.sendKeysWhenClickable(driver, txtActionDescription, action_description, Duration.ofSeconds(10));
+	}
+
+	public void enterStartDate(String startdate) {
+		ActionUtil.sendKeysWhenClickable(driver, inputStartDate, startdate, Duration.ofSeconds(10));
 		inputStartDate.sendKeys(Keys.ENTER);
+	}
 
-		explicitWait.until(ExpectedConditions.elementToBeClickable(inputEndDate)).sendKeys(enddate);
+	public void enterEndDate(String enddate) {
+		ActionUtil.sendKeysWhenClickable(driver, inputEndDate, enddate, Duration.ofSeconds(10));
 		inputEndDate.sendKeys(Keys.ENTER);
+	}
 
-		explicitWait.until(ExpectedConditions.elementToBeClickable(drpDwnFltrByCusTags)).click();
-		driver.findElement(By.xpath("//div[contains(text(),'" + filterByTags + "')]")).click();
+	public void selectFltrByCusTag(String filterByTags) {
+		List<WebElement> drpdwnTagList = ActionUtil.waitForVisibilityOfAllElements(driver, drpDwnFltrByCusTags,
+				Duration.ofSeconds(10));
 
-		explicitWait.until(ExpectedConditions.elementToBeClickable(txtTrackingInstruction))
-				.sendKeys(tracking_instruction);
-
-		btnUploadBanner.sendKeys(System.getProperty("user.dir") + "\\image\\banner_img.jpg");
-		explicitWait.until(ExpectedConditions.elementToBeClickable(btnBannerCrop)).click();
-
-		logger.info("User enters Reward Points and Impact Details");
-
-		explicitWait.until(ExpectedConditions.elementToBeClickable(inputPoints)).sendKeys(reward_points);
-
-		explicitWait.until(ExpectedConditions.elementToBeClickable(inputGallonsOfWater)).sendKeys(water_saved);
-
-		explicitWait.until(ExpectedConditions.elementToBeClickable(inputKgsOfPlastic)).sendKeys(plastic_saved);
-
-		explicitWait.until(ExpectedConditions.elementToBeClickable(inputTreesPlanted)).sendKeys(Trees_planted);
+		for (WebElement tagList : drpdwnTagList) {
+			if (tagList.getText().equals(filterByTags)) {
+				tagList.click();
+				break;
+			}
+		}
 
 	}
+
+	public void enterTrackingInstruction(String tracking_instruction) {
+		ActionUtil.sendKeysWhenClickable(driver, txtTrackingInstruction, tracking_instruction, Duration.ofSeconds(10));
+	}
+
+	public void uploadBannerImage() {
+		ActionUtil.sendKeysWhenClickable(driver, btnUploadBanner,
+				System.getProperty("user.dir") + "\\image\\banner_img.jpg", Duration.ofSeconds(10));
+		ActionUtil.click(btnBannerCrop);
+
+	}
+
+	public void enterRewardPoint(String reward_points) {
+		ActionUtil.sendKeysWhenClickable(driver, inputPoints, reward_points, Duration.ofSeconds(10));
+	}
+
+	public void enterImpactOne(String water_saved) {
+		ActionUtil.sendKeysWhenClickable(driver, inputGallonsOfWater, water_saved, Duration.ofSeconds(10));
+	}
+
+	public void enterImpactTwo(String plastic_saved) {
+		ActionUtil.sendKeysWhenClickable(driver, inputKgsOfPlastic, plastic_saved, Duration.ofSeconds(10));
+	}
+
+	public void enterImpactThree(String Trees_planted) {
+		ActionUtil.sendKeysWhenClickable(driver, inputTreesPlanted, Trees_planted, Duration.ofSeconds(10));
+	}
+
+	public void enterOptionalEmailSettings(String optional_email_settings) {
+		ActionUtil.sendKeysWhenClickable(driver, optionalEmailSettings, optional_email_settings, Duration.ofSeconds(10));
+	}
+	
+	public void enterContent(String content) {
+		ActionUtil.sendKeysWhenClickable(driver, txtcontent, content, Duration.ofSeconds(10));
+	}
+	
+	
+	public void enterCorelatedTask(String correlated_task) {
+		ActionUtil.sendKeysWhenClickable(driver, txtCorelatedTask, correlated_task, Duration.ofSeconds(10));
+	}
+	
+	
+	
 	
 	public void verifyChallengeDetails(Map<String, String> challenge_Details) {
-        Assert.assertEquals(challenge_Details.get("challengeName"), txtName.getText());
-        Assert.assertEquals(challenge_Details.get("shortDescription"), txtShortDescription.getText());
-        Assert.assertEquals(challenge_Details.get("actionDescription"), txtActionDescription.getText());
-        Assert.assertEquals(challenge_Details.get("startDate"), inputStartDate.getText());
-        Assert.assertEquals(challenge_Details.get("endDate"), inputEndDate.getText());
-        Assert.assertEquals(challenge_Details.get("filter_By_Tags"), drpDwnFltrByCusTags.getText());
-        Assert.assertEquals(challenge_Details.get("trackinginstruction"), txtTrackingInstruction.getText());
-        Assert.assertEquals(challenge_Details.get("rewardpoints"), inputPoints.getText());
-        Assert.assertEquals(challenge_Details.get("watersaved"), inputGallonsOfWater.getText());
-        Assert.assertEquals(challenge_Details.get("plasticsaved"), inputKgsOfPlastic.getText());
-        Assert.assertEquals(challenge_Details.get("treesplanted"), inputTreesPlanted.getText());
-        Assert.assertEquals(challenge_Details.get("optionalEmailSettings"), optionalEmailSettings.getText());
-        Assert.assertEquals(challenge_Details.get("Content"), txtcontent.getText());
-        Assert.assertEquals(challenge_Details.get("correlatedTask"), txtCorelatedTask.getText());
-        
-    }
+		Assert.assertEquals(challenge_Details.get("challengeName"), txtName.getText());
+		Assert.assertEquals(challenge_Details.get("shortDescription"), txtShortDescription.getText());
+		Assert.assertEquals(challenge_Details.get("actionDescription"), txtActionDescription.getText());
+		Assert.assertEquals(challenge_Details.get("startDate"), inputStartDate.getText());
+		Assert.assertEquals(challenge_Details.get("endDate"), inputEndDate.getText());
+		Assert.assertEquals(challenge_Details.get("filter_By_Tags"), drpDwnFltrByCusTags.getText());
+		Assert.assertEquals(challenge_Details.get("trackinginstruction"), txtTrackingInstruction.getText());
+		Assert.assertEquals(challenge_Details.get("rewardpoints"), inputPoints.getText());
+		Assert.assertEquals(challenge_Details.get("watersaved"), inputGallonsOfWater.getText());
+		Assert.assertEquals(challenge_Details.get("plasticsaved"), inputKgsOfPlastic.getText());
+		Assert.assertEquals(challenge_Details.get("treesplanted"), inputTreesPlanted.getText());
+		Assert.assertEquals(challenge_Details.get("optionalEmailSettings"), optionalEmailSettings.getText());
+		Assert.assertEquals(challenge_Details.get("Content"), txtcontent.getText());
+		Assert.assertEquals(challenge_Details.get("correlatedTask"), txtCorelatedTask.getText());
 
+	}
 
 	/**
 	 * User publishes the Ways to Earn Challenge
@@ -142,7 +176,7 @@ public class BuildFromScratchPage extends BasePage {
 
 	public void publish() {
 		logger.info("User publishes the Ways to Earn Action");
-		explicitWait.until(ExpectedConditions.elementToBeClickable(btnPublish)).click();
+		ActionUtil.click(btnPublish);
 
 	}
 

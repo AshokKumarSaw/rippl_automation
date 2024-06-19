@@ -7,9 +7,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import step_definitions.Hook;
+import utilities.ActionUtil;
 
 public class ShopifyLoginPage extends BasePage {
-	public WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
+	//public WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
 	public ShopifyLoginPage(WebDriver driver) {
 		super(driver);
@@ -31,25 +32,26 @@ public class ShopifyLoginPage extends BasePage {
 	@FindBy(xpath = "//button[@name='commit']")
 	WebElement btnLogin;
 
-	/*
-	 * User logs in into shopify application
-	 * 
-	 * @param shopify_email
-	 * 
-	 * @param shopify_password
-	 */
-
-	public void loginShopify(String shopify_email, String shopify_password) {
-		explicitWait.until(ExpectedConditions.elementToBeClickable(lnkLogin)).click();
-		logger.info("User clicks Login Link on Shopify page ");
-		explicitWait.until(ExpectedConditions.elementToBeClickable(txtEmail))
-				.sendKeys(Hook.properties.getProperty("shopify_email"));
-		explicitWait.until(ExpectedConditions.elementToBeClickable(btnContinueWithEmail)).click();
-		explicitWait.until(ExpectedConditions.elementToBeClickable(txtPassword))
-				.sendKeys(Hook.properties.getProperty("shopify_password"));
-		explicitWait.until(ExpectedConditions.elementToBeClickable(btnLogin)).click();
-		logger.info("User enters shopify email,clicks on Continue with Email, enters password, clicks on Login button");
-
+	//Methods
+	public void clickShopifyLoginLnk() {
+ActionUtil.click(lnkLogin);
 	}
+
+	public void enterShopifyEmail(String shopify_email) {
+		ActionUtil.sendKeysWhenClickable(driver, txtEmail, Hook.properties.getProperty("shopify_email"), Duration.ofSeconds(10));
+	}
+
+	public void clickContinueWithEmail() {
+		ActionUtil.click(btnContinueWithEmail);
+	}
+
+	public void enterShopifyPassword(String shopify_password) {
+		ActionUtil.sendKeysWhenClickable(driver, txtPassword, Hook.properties.getProperty("shopify_password"), Duration.ofSeconds(10));
+	}
+
+	public void clickShopifyLoginBtn() {
+		ActionUtil.click(btnLogin);
+	}
+
 
 }

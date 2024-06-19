@@ -12,7 +12,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.ActionUtil;
 
 public class Rippl_RewardsPage extends BasePage {
-	public WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
 	public Rippl_RewardsPage(WebDriver driver) {
 		super(driver);
@@ -32,51 +31,56 @@ public class Rippl_RewardsPage extends BasePage {
 
 	@FindBy(xpath = "//h2[contains(text(),'Build From Scratch')]")
 	WebElement btnBuildFromScratch;
-	
+
 	@FindBy(xpath = "//div[@class=\"MuiCardContent-root css-1vq0w4j\"]")
 	WebElement listWaysToEarn;
-	
+
 	@FindBy(xpath = "//button[contains(text(),'Edit')]")
 	WebElement btnEditWaysToEarnChallenge;
-	
-	
-	
 
 	/**
-	 * User navigates to Hamburger icon, program->Points->Add Ways to Earn->Bild
+	 * User navigates to Hamburger icon, program->Points->Add Ways to Earn->Build
 	 * From Scratch Template
 	 * 
 	 */
 
-	public void navigateToBuildFromScratchTemplate() {
-		logger.info("User clicks on Hamburger icon,Program->Points->Add Ways to Earn-> Build From Scratch Template");
+	public void clickHamburgerIcon() {
 		driver.switchTo().frame("app-iframe");
+		ActionUtil.clickWhenClickable(driver, iconHamburger, Duration.ofSeconds(10));
+	}
 
-		explicitWait.until(ExpectedConditions.elementToBeClickable(iconHamburger)).click();
-		explicitWait.until(ExpectedConditions.elementToBeClickable(drpdwnProgram)).click();
-		explicitWait.until(ExpectedConditions.elementToBeClickable(submenuPoints)).click();
-		explicitWait.until(ExpectedConditions.elementToBeClickable(btnAddWaystoEarn)).click();
-		explicitWait.until(ExpectedConditions.elementToBeClickable(btnBuildFromScratch)).click();
+	public void clickProgramDrpdwn() {
+		ActionUtil.clickWhenClickable(driver, drpdwnProgram, Duration.ofSeconds(10));
+	}
+
+	public void clickPoints() {
+		ActionUtil.clickWhenClickable(driver, submenuPoints, Duration.ofSeconds(10));
+	}
+
+	public void clickAddWaysToEarn() {
+		ActionUtil.clickWhenClickable(driver, btnAddWaystoEarn, Duration.ofSeconds(10));
+	}
+
+	public void clickBuildFromScratch() {
+		ActionUtil.clickWhenClickable(driver, btnBuildFromScratch, Duration.ofSeconds(10));
+	}
+
+
+
+	public void verifyNewlyCreatedChallengeFromWaysToEarnList(String challenge_name) {
+
+		List<WebElement> waystoearnlist = ActionUtil.waitForVisibilityOfAllElements(driver, listWaysToEarn,
+				Duration.ofSeconds(10));
+
+
+
+		for (WebElement challengename : waystoearnlist) {
+			if (challengename.getText().equals(challenge_name)) {
+				btnEditWaysToEarnChallenge.click();
+				break;
+			}
+		}
 
 	}
-	
-	public void verifyNewlyCreatedChallengeFromWaysToEarnList(String challenge_name)
-	{
-		List<WebElement> waystoearnlist = explicitWait
-		.until(ExpectedConditions.visibilityOfAllElements(listWaysToEarn));
-		
-
-for (WebElement challengename : waystoearnlist) {
-//	System.out.println(challengename.getText()+"........................");
-	if (challengename.getText().equals(challenge_name)) {
-		btnEditWaysToEarnChallenge.click();
-		break;
-	}
-}
-
-		
-	}
-	
-	
 
 }
