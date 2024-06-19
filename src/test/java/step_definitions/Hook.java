@@ -54,7 +54,7 @@ public class Hook {
 		}
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.get(properties.getProperty("applicationUrl"));
+		driver.get(properties.getProperty("shopify_applicationUrl"));
 		driver.manage().window().maximize();
 
 	}
