@@ -9,6 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import page_objects.BuildFromScratchPage;
+import page_objects.RipplUserDashboardPage;
 import page_objects.ShopifyLandingPage;
 import page_objects.Rippl_RewardsPage;
 import page_objects.ShopifyLoginPage;
@@ -18,6 +19,7 @@ public class BuildFromScratch {
 	ShopifyLandingPage shopifyLandinPage = new ShopifyLandingPage(Hook.driver);
 	Rippl_RewardsPage rippl_RewardsPage = new Rippl_RewardsPage(Hook.driver);
 	BuildFromScratchPage buildFromScratchPage = new BuildFromScratchPage(Hook.driver);
+	RipplUserDashboardPage ripplUserDashboardPage = new RipplUserDashboardPage(Hook.driver);
 
 	@Given("user is on shopify dashboard {string}, {string}")
 	public void user_is_on_shopify_dashboard(String shopify_email, String shopify_password) {
@@ -113,7 +115,9 @@ public class BuildFromScratch {
 	@Then("verify the created {string} is visible on user dash widget under Actions for Base_Tier customers {string}")
 	public void verify_the_created_is_visible_on_user_dash_widget_under_actions_for_base_tier_customers(String string,
 			String string2) {
-
+		ripplUserDashboardPage.launchRipplRewardsUserDashboard();
+		ripplUserDashboardPage.loginToRipplRewardsUserDashboard();
+		
 	}
 
 	@Then("verify user can view the challenge {string} in widget dash only if the challenege status <challenge_status> is set as active")

@@ -8,6 +8,7 @@ import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -72,6 +73,12 @@ public class BuildFromScratchPage extends BasePage {
 
 	@FindBy(xpath = "//button[text()='Publish' and @type='submit']")
 	WebElement btnPublish;
+	
+	
+//	public void openNewTab()
+//	{
+//		driver.switchTo().newWindow(WindowType.WINDOW);
+//	}
 
 	public void randomChallengeName(String challenge_name) {
 		String challengeName = ActionUtil.generateRandomChallengeName();
