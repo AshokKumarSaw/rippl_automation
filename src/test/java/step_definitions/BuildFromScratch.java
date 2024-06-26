@@ -113,22 +113,26 @@ public class BuildFromScratch {
 	}
 
 	@Then("verify the created {string} is visible on user dash widget under Actions for Base_Tier customers {string}")
-	public void verify_the_created_is_visible_on_user_dash_widget_under_actions_for_base_tier_customers(String string,
-			String string2) {
+	public void verify_the_created_is_visible_on_user_dash_widget_under_actions_for_base_tier_customers(String challenge_name,
+			String filterByTags) {
 		ripplUserDashboardPage.launchRipplRewardsUserDashboard();
 		ripplUserDashboardPage.loginToRipplRewardsUserDashboard();
+		ripplUserDashboardPage.getChallengeNameFromWidgetDash(challenge_name);
+		ripplUserDashboardPage.getTagNameFromWidgetDash(filterByTags);
+		
 		
 	}
 
 	@Then("verify user can view the challenge {string} in widget dash only if the challenege status <challenge_status> is set as active")
 	public void verify_user_can_view_the_challenge_in_widget_dash_only_if_the_challenege_status_challenge_status_is_set_as_active(
-			String string) {
+			String challenge_name) {
+		ripplUserDashboardPage.getChallengeNameFromWidgetDash(challenge_name);
 
 	}
 
 	@Then("verify user is assigned and able to view base tier {string} by default in widget dash")
-	public void verify_user_is_assigned_and_able_to_view_base_tier_by_default_in_widget_dash(String string) {
-
+	public void verify_user_is_assigned_and_able_to_view_base_tier_by_default_in_widget_dash(String filterByTags) {
+		ripplUserDashboardPage.getTagNameFromWidgetDash(filterByTags);
 	}
 
 	@Then("verify same {string} is visible on user dash widget under Actions just below the {string}")
