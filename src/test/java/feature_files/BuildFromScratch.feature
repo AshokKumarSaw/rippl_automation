@@ -17,7 +17,7 @@ Feature: Ways to Earn
     And verify user is assigned and able to view base tier <filterByTags> by default in widget dash
     And verify same <short_description> is visible on user dash widget under Actions just below the "challenge_name"
     And verify same <action_description> is visible under details when user selects the "challenge_name"
-    And verify user can view same <tracking_instruction> in widget dash while completing the challenge set during challenge creation
+    And verify user can view same <tracking_instruction> in widget dash for the challenge "challenge_name" set during challenge creation
     And verify user is able to complete the "challenge_name" only once
     And verify users account is credited with the same <reward_points> on completing the "challenge_name" which was configured
     And verify on approving the completed action, a <correlated_task> configured in the challenge is created in the Tasks

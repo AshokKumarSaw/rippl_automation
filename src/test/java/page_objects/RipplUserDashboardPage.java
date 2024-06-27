@@ -41,6 +41,20 @@ public class RipplUserDashboardPage extends BasePage {
 	@FindBy(xpath = "//button[normalize-space()=\"Sign in\"]")
 	WebElement txtAllActionsNameInWidgetDash;
 
+	@FindBy(xpath = "//button[normalize-space()=\"Sign in\"]")
+	WebElement txtChallengeSrtDscptnInWidgetDash;
+	
+	@FindBy(xpath = "//button[normalize-space()=\"Sign in\"]")
+	WebElement txtActionDscptnInWidgetDash;
+	
+	@FindBy(xpath = "//*[starts-with(text,'Complete')]")
+	WebElement btnCmplteActn;
+	
+	@FindBy(xpath = "//*[starts-with(text,'Complete')]")
+	WebElement txtTrackingInstructionInWidgetDash;
+	
+	
+
 	public void launchRipplRewardsUserDashboard() {
 		try {
 			driver.switchTo().newWindow(WindowType.WINDOW);
@@ -86,5 +100,74 @@ public class RipplUserDashboardPage extends BasePage {
 		}
 
 	}
+	public boolean validateShortDescription(String challenge_name, String short_description) {
 
+		List<WebElement> drpdwnChallengeNameList = ActionUtil.waitForVisibilityOfAllElements(driver,
+				txtAllActionsNameInWidgetDash, Duration.ofSeconds(10));
+
+		for (WebElement challengeName : drpdwnChallengeNameList) {
+			if (challengeName.getText().equals(challenge_name)) {
+				if (txtChallengeSrtDscptnInWidgetDash.getText().equals(short_description)) {
+					return true;
+				}
+
+			}
+
+		}
+		return false;
+	}
+
+	
+	
+	
+	public boolean validateActionDescription(String challenge_name, String action_description) {
+
+		List<WebElement> drpdwnChallengeNameList = ActionUtil.waitForVisibilityOfAllElements(driver,
+				txtAllActionsNameInWidgetDash, Duration.ofSeconds(10));
+
+		for (WebElement challengeName : drpdwnChallengeNameList) {
+			if (challengeName.getText().equals(challenge_name)) {
+				challengeName.click();
+				if (txtActionDscptnInWidgetDash.getText().equals(action_description)) {
+					return true;
+				}
+
+			}
+
+		}
+		return false;
+	}
+	
+	
+	
+	
+	public boolean validateTrackingInstructions(String challenge_name,String tracking_instruction) {
+
+		List<WebElement> drpdwnChallengeNameList = ActionUtil.waitForVisibilityOfAllElements(driver,
+				txtAllActionsNameInWidgetDash, Duration.ofSeconds(10));
+
+		for (WebElement challengeName : drpdwnChallengeNameList) {
+			if (challengeName.getText().equals(challenge_name)) {
+				challengeName.click();
+				btnCmplteActn.click();
+				if (txtTrackingInstructionInWidgetDash.getText().equals(tracking_instruction)) {
+					return true;
+				}
+
+			}
+
+		}
+		return false;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

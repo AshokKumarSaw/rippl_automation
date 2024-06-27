@@ -113,14 +113,13 @@ public class BuildFromScratch {
 	}
 
 	@Then("verify the created {string} is visible on user dash widget under Actions for Base_Tier customers {string}")
-	public void verify_the_created_is_visible_on_user_dash_widget_under_actions_for_base_tier_customers(String challenge_name,
-			String filterByTags) {
+	public void verify_the_created_is_visible_on_user_dash_widget_under_actions_for_base_tier_customers(
+			String challenge_name, String filterByTags) {
 		ripplUserDashboardPage.launchRipplRewardsUserDashboard();
 		ripplUserDashboardPage.loginToRipplRewardsUserDashboard();
 		ripplUserDashboardPage.getChallengeNameFromWidgetDash(challenge_name);
 		ripplUserDashboardPage.getTagNameFromWidgetDash(filterByTags);
-		
-		
+
 	}
 
 	@Then("verify user can view the challenge {string} in widget dash only if the challenege status <challenge_status> is set as active")
@@ -136,19 +135,21 @@ public class BuildFromScratch {
 	}
 
 	@Then("verify same {string} is visible on user dash widget under Actions just below the {string}")
-	public void verify_same_is_visible_on_user_dash_widget_under_actions_just_below_the(String string, String string2) {
-
+	public void verify_same_is_visible_on_user_dash_widget_under_actions_just_below_the(String challenge_name,
+			String short_description) {
+		ripplUserDashboardPage.validateShortDescription(challenge_name, short_description);
 	}
 
 	@Then("verify same {string} is visible under details when user selects the {string}")
-	public void verify_same_is_visible_under_details_when_user_selects_the(String string, String string2) {
-
+	public void verify_same_is_visible_under_details_when_user_selects_the(String challenge_name,
+			String action_description) {
+		ripplUserDashboardPage.validateActionDescription(challenge_name, action_description);
 	}
 
-	@Then("verify user can view same {string} in widget dash while completing the challenge set during challenge creation")
-	public void verify_user_can_view_same_in_widget_dash_while_completing_the_challenge_set_during_challenge_creation(
-			String string) {
-
+	@Then("verify user can view same {string} in widget dash for the challenge {string} set during challenge creation")
+	public void verify_user_can_view_same_in_widget_dash_for_the_challenge_set_during_challenge_creation(
+			String challenge_name, String tracking_instruction) {
+		ripplUserDashboardPage.validateTrackingInstructions(challenge_name, tracking_instruction);
 	}
 
 	@Then("verify user is able to complete the {string} only once")
