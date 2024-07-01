@@ -15,6 +15,7 @@ import utilities.ActionUtil;
 
 public class RipplUserDashboardPage extends BasePage {
 	public static Properties properties;
+	ShopifyLoginPage shopifyLoginPage=new ShopifyLoginPage(Hook.driver);
 
 	public RipplUserDashboardPage(WebDriver driver) {
 		super(driver);
@@ -43,17 +44,21 @@ public class RipplUserDashboardPage extends BasePage {
 
 	@FindBy(xpath = "//button[normalize-space()=\"Sign in\"]")
 	WebElement txtChallengeSrtDscptnInWidgetDash;
-	
+
 	@FindBy(xpath = "//button[normalize-space()=\"Sign in\"]")
 	WebElement txtActionDscptnInWidgetDash;
-	
+
 	@FindBy(xpath = "//*[starts-with(text,'Complete')]")
 	WebElement btnCmplteActn;
-	
+
 	@FindBy(xpath = "//*[starts-with(text,'Complete')]")
 	WebElement txtTrackingInstructionInWidgetDash;
-	
-	
+
+	@FindBy(xpath = "//*[starts-with(text,'Complete')]")
+	WebElement btnUploadImg;
+
+	@FindBy(xpath = "//p[contains(text(),'Points')]")
+	WebElement rewardPoints;
 
 	public void launchRipplRewardsUserDashboard() {
 		try {
@@ -100,6 +105,7 @@ public class RipplUserDashboardPage extends BasePage {
 		}
 
 	}
+
 	public boolean validateShortDescription(String challenge_name, String short_description) {
 
 		List<WebElement> drpdwnChallengeNameList = ActionUtil.waitForVisibilityOfAllElements(driver,
@@ -117,9 +123,6 @@ public class RipplUserDashboardPage extends BasePage {
 		return false;
 	}
 
-	
-	
-	
 	public boolean validateActionDescription(String challenge_name, String action_description) {
 
 		List<WebElement> drpdwnChallengeNameList = ActionUtil.waitForVisibilityOfAllElements(driver,
@@ -137,11 +140,8 @@ public class RipplUserDashboardPage extends BasePage {
 		}
 		return false;
 	}
-	
-	
-	
-	
-	public boolean validateTrackingInstructions(String challenge_name,String tracking_instruction) {
+
+	public boolean validateTrackingInstructions(String challenge_name, String tracking_instruction) {
 
 		List<WebElement> drpdwnChallengeNameList = ActionUtil.waitForVisibilityOfAllElements(driver,
 				txtAllActionsNameInWidgetDash, Duration.ofSeconds(10));
@@ -159,15 +159,39 @@ public class RipplUserDashboardPage extends BasePage {
 		}
 		return false;
 	}
+
+	public void uploadImage() {
+		ActionUtil.clickWhenClickable(driver, btnUploadImg, Duration.ofSeconds(2));
+		ActionUtil.sendKeysWhenClickable(driver, btnUploadImg, System.getProperty("user.dir") + "\\image\\ashok.jpg",
+				Duration.ofSeconds(5));
+
+	}
+
+	public boolean verifyRewardpointsCredit(String reward_points) {
+		String updatedReward_points = rewardPoints.getText();
+		if (updatedReward_points == rewardPoints.getAttribute("points") + 1) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	
+	/*
+	 * NOTE: User needs to navigate back to the admin dashboard from user dashboard to perform the below Action
+	 */
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public void correlatedTaskCreation()
+	{
+		driver.switchTo().newWindow(WindowType.WINDOW);
+		driver.get(properties.getProperty("shopify_applicationUrl"));
+		driver.manage().window().maximize();
+		shopifyLoginPage.clickShopifyLoginLnk();
+		shopifyLoginPage.enterShopifyEmail(properties.getProperty("shopify_email"));
+		shopifyLoginPage.clickContinueWithEmail();
+		shopifyLoginPage.enterShopifyPassword(properties.getProperty("shopify_password"));
+		shopifyLoginPage.clickShopifyLoginBtn();
+		
+		
+	}
+
 }

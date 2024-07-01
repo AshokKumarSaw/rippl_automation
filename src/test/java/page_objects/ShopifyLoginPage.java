@@ -18,34 +18,34 @@ public class ShopifyLoginPage extends BasePage {
 	// Elements
 
 	@FindBy(xpath = "//a[@class='whitespace-nowrap hover:underline text-white']")
-	WebElement lnkLogin;
+	static WebElement lnkLogin;
 
 	@FindBy(xpath = "//input[@id='account_email']")
-	WebElement txtEmail;
+static 	WebElement txtEmail;
 
 	@FindBy(xpath = "//button[@name='commit']")
-	WebElement btnContinueWithEmail;
+static 	WebElement btnContinueWithEmail;
 
 	@FindBy(xpath = "//input[@id='account_password']")
-	WebElement txtPassword;
+static 	WebElement txtPassword;
 
 	@FindBy(xpath = "//button[@name='commit']")
-	WebElement btnLogin;
+static 	WebElement btnLogin;
 
 	//Methods
-	public void clickShopifyLoginLnk() {
+	public  void clickShopifyLoginLnk() {
 ActionUtil.click(lnkLogin);
 	}
 
-	public void enterShopifyEmail(String shopify_email) {
+	public  void enterShopifyEmail(String shopify_email) {
 		ActionUtil.sendKeysWhenClickable(driver, txtEmail, Hook.properties.getProperty("shopify_email"), Duration.ofSeconds(10));
 	}
 
-	public void clickContinueWithEmail() {
+	public  void clickContinueWithEmail() {
 		ActionUtil.click(btnContinueWithEmail);
 	}
 
-	public void enterShopifyPassword(String shopify_password) {
+	public  void enterShopifyPassword(String shopify_password) {
 		ActionUtil.sendKeysWhenClickable(driver, txtPassword, Hook.properties.getProperty("shopify_password"), Duration.ofSeconds(10));
 	}
 

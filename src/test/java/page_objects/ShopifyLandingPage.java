@@ -18,7 +18,7 @@ public class ShopifyLandingPage extends BasePage {
 	}
 
 	@FindBy(xpath = "//span[@class='Polaris-Avatar__Initials']//*[name()='svg']")
-	WebElement actLogo;
+	 WebElement actLogo;
 
 	@FindBy(xpath = "//body/div[@id='app']/div[@id='PolarisPortalsContainer']/div[1]")
 	WebElement drpdwnLogoOptions;
@@ -33,7 +33,7 @@ public class ShopifyLandingPage extends BasePage {
 	 * User clicks on My_Account Log in Shopify home page
 	 */
 
-	public void clickShopifyMyAccountLogo() {
+	public  void clickShopifyMyAccountLogo() {
 
 		ActionUtil.click(actLogo);
 	}

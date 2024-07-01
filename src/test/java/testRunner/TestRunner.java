@@ -14,7 +14,7 @@ plugin = {
 		"pretty", "html:reports/myreport.html", "json:reports/myreport.json", "rerun:target/rerun.txt", // Mandatory to
 																										// capture																										// failures
 }, 
-dryRun = true, 
+dryRun = false, 
 monochrome = true, 
 tags = "@buildfromscratch"
 

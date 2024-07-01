@@ -152,14 +152,15 @@ public class BuildFromScratch {
 		ripplUserDashboardPage.validateTrackingInstructions(challenge_name, tracking_instruction);
 	}
 
-	@Then("verify user is able to complete the {string} only once")
-	public void verify_user_is_able_to_complete_the_only_once(String string) {
-
+	@Then("verify user is able to complete the action challenge_name")
+	public void verify_user_is_able_to_complete_the_action_challenge_name() {
+		ripplUserDashboardPage.uploadImage();
 	}
 
-	@Then("verify users account is credited with the same {string} on completing the {string} which was configured")
-	public void verify_users_account_is_credited_with_the_same_on_completing_the_which_was_configured(String string,
-			String string2) {
+	@Then("verify users account is credited with the same {string} on completing the challenge_name which was configured")
+	public void verify_users_account_is_credited_with_the_same_on_completing_the_challenge_name_which_was_configured(
+			String reward_points) {
+		ripplUserDashboardPage.verifyRewardpointsCredit(reward_points);
 
 	}
 
